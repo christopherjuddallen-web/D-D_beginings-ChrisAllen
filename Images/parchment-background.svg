@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <style>
+      .grain line { stroke: #b8924a; stroke-width: 0.4; opacity: 0.18; }
+    </style>
+  </defs>
+
+  <!-- Base warm parchment -->
+  <rect width="800" height="1000" fill="#e8d09a"/>
+
+  <!-- Mid-tone wash -->
+  <rect width="800" height="1000" fill="#d4b87a" opacity="0.25"/>
+
+  <!-- Subtle warm center highlight -->
+  <ellipse cx="400" cy="500" rx="340" ry="420" fill="#f0deb0" opacity="0.45"/>
+  <ellipse cx="400" cy="500" rx="220" ry="280" fill="#f5e6c0" opacity="0.30"/>
+
+  <!-- Edge darkening - top -->
+  <rect x="0" y="0" width="800" height="120" fill="#8b6220" opacity="0.28"/>
+  <!-- Edge darkening - bottom -->
+  <rect x="0" y="880" width="800" height="120" fill="#7a5518" opacity="0.30"/>
+  <!-- Edge darkening - left -->
+  <rect x="0" y="0" width="100" height="1000" fill="#8b6220" opacity="0.22"/>
+  <!-- Edge darkening - right -->
+  <rect x="700" y="0" width="100" height="1000" fill="#8b6220" opacity="0.22"/>
+
+  <!-- Corner aging - top left -->
+  <ellipse cx="30" cy="30" rx="120" ry="110" fill="#6b4510" opacity="0.32"/>
+  <!-- Corner aging - top right -->
+  <ellipse cx="770" cy="30" rx="120" ry="110" fill="#6b4510" opacity="0.28"/>
+  <!-- Corner aging - bottom left -->
+  <ellipse cx="30" cy="970" rx="120" ry="110" fill="#6b4510" opacity="0.30"/>
+  <!-- Corner aging - bottom right -->
+  <ellipse cx="770" cy="970" rx="120" ry="110" fill="#6b4510" opacity="0.28"/>
+
+  <!-- Random age stains -->
+  <ellipse cx="160" cy="220" rx="55" ry="38" fill="#a07030" opacity="0.12"/>
+  <ellipse cx="620" cy="140" rx="40" ry="28" fill="#9a6a28" opacity="0.10"/>
+  <ellipse cx="70"  cy="500" rx="30" ry="60" fill="#8b6020" opacity="0.13"/>
+  <ellipse cx="730" cy="640" rx="38" ry="55" fill="#a07030" opacity="0.11"/>
+  <ellipse cx="380" cy="880" rx="70" ry="30" fill="#9a6828" opacity="0.12"/>
+  <ellipse cx="500" cy="320" rx="28" ry="18" fill="#c09040" opacity="0.09"/>
+  <ellipse cx="240" cy="760" rx="45" ry="22" fill="#a07030" opacity="0.10"/>
+  <ellipse cx="650" cy="820" rx="35" ry="50" fill="#8b6020" opacity="0.12"/>
+  <ellipse cx="110" cy="880" rx="60" ry="28" fill="#7a5518" opacity="0.14"/>
+  <ellipse cx="700" cy="200" rx="25" ry="40" fill="#9a6828" opacity="0.10"/>
+
+  <!-- Horizontal grain lines (paper fiber texture) -->
+  <g class="grain">
+    <line x1="0" y1="48"  x2="800" y2="50"/>
+    <line x1="0" y1="96"  x2="800" y2="94"/>
+    <line x1="0" y1="143" x2="800" y2="146"/>
+    <line x1="0" y1="191" x2="800" y2="189"/>
+    <line x1="0" y1="238" x2="800" y2="240"/>
+    <line x1="0" y1="286" x2="800" y2="284"/>
+    <line x1="0" y1="333" x2="800" y2="336"/>
+    <line x1="0" y1="381" x2="800" y2="379"/>
+    <line x1="0" y1="428" x2="800" y2="431"/>
+    <line x1="0" y1="476" x2="800" y2="474"/>
+    <line x1="0" y1="524" x2="800" y2="526"/>
+    <line x1="0" y1="571" x2="800" y2="569"/>
+    <line x1="0" y1="619" x2="800" y2="621"/>
+    <line x1="0" y1="666" x2="800" y2="664"/>
+    <line x1="0" y1="714" x2="800" y2="716"/>
+    <line x1="0" y1="761" x2="800" y2="759"/>
+    <line x1="0" y1="809" x2="800" y2="811"/>
+    <line x1="0" y1="856" x2="800" y2="854"/>
+    <line x1="0" y1="904" x2="800" y2="906"/>
+    <line x1="0" y1="952" x2="800" y2="950"/>
+  </g>
+
+  <!-- Subtle vertical fibers -->
+  <line x1="195" y1="0" x2="197" y2="1000" stroke="#b8924a" stroke-width="0.5" opacity="0.08"/>
+  <line x1="390" y1="0" x2="388" y2="1000" stroke="#b8924a" stroke-width="0.4" opacity="0.07"/>
+  <line x1="580" y1="0" x2="582" y2="1000" stroke="#b8924a" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Outer vignette border line -->
+  <rect x="18" y="18" width="764" height="964" fill="none" stroke="#7a5010" stroke-width="1.2" opacity="0.20" rx="2"/>
+</svg>
