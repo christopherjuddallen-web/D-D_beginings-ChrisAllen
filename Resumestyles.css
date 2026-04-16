@@ -1,0 +1,218 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #1a2640;
+  --slate:  #2e3d55;
+  --gold:   #c9a55a;
+  --light:  #f5f3ef;
+  --muted:  #6b7a8f;
+  --rule:   #d8d2c8;
+  --white:  #ffffff;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light);
+  color: var(--navy);
+  min-height: 100vh;
+  padding: 48px 20px;
+}
+
+/* ── Back Button ── */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+.back-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+.back-btn::before {
+  content: '←';
+  font-size: 1rem;
+}
+
+/* ── Page Card ── */
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 8px 48px rgba(26,38,64,.13);
+}
+
+/* ── Header ── */
+.header {
+  background: var(--navy);
+  padding: 52px 56px 44px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 260px; height: 260px;
+  background: var(--gold);
+  opacity: .06;
+  border-radius: 50%;
+  transform: translate(60px, 80px);
+}
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: .5px;
+  line-height: 1.1;
+}
+.header h1 span {
+  color: var(--gold);
+}
+.contact-bar {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+}
+.contact-bar a,
+.contact-bar span {
+  font-size: .85rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  letter-spacing: .3px;
+}
+.contact-bar a:hover { color: var(--gold); }
+.contact-bar .dot {
+  color: var(--gold);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ── Body layout ── */
+.body {
+  padding: 44px 56px 56px;
+}
+
+/* ── Section ── */
+.section { margin-bottom: 36px; }
+.section:last-child { margin-bottom: 0; }
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold);
+  margin-bottom: 24px;
+}
+
+/* ── Entry ── */
+.entry { margin-bottom: 24px; }
+.entry:last-child { margin-bottom: 0; }
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+.entry-org {
+  font-size: .98rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+.entry-location {
+  font-size: .82rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+.entry-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.entry-role {
+  font-size: .88rem;
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 400;
+}
+.entry-date {
+  font-size: .82rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+.entry ul {
+  list-style: none;
+  padding: 0;
+}
+.entry ul li {
+  font-size: .875rem;
+  line-height: 1.7;
+  color: #3a4a5e;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 3px;
+}
+.entry ul li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ── Skills block ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 40px;
+}
+.skill-label {
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+.skill-value {
+  font-size: .875rem;
+  color: #3a4a5e;
+  line-height: 1.6;
+}
+
+/* ── Print ── */
+@media print {
+  body { background: white; padding: 0; }
+  .back-btn { display: none; }
+  .page { box-shadow: none; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .header { padding: 36px 28px 32px; }
+  .body    { padding: 32px 28px 40px; }
+  .header h1 { font-size: 2rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+}
